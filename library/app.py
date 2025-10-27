@@ -54,7 +54,7 @@ def avaliar_livro(id_livro):
     livro = Livro.query.get_or_404(id_livro)
 
     if request.method == "POST":
-        usuario_id = 1  # exemplo (poderia vir do login)
+        usuario_id = 1 
         nota = int(request.form["nota"])
         comentario = request.form["comentario"]
 
@@ -79,7 +79,7 @@ def emprestar_livro(id_livro):
     livro = Livro.query.get_or_404(id_livro)
 
     if request.method == "POST":
-        usuario_id = 1  # exemplo (poderia vir do login)
+        usuario_id = 1  
         emprestimo = Emprestimo(
             data_emprestimo=date.today(),
             status="Em andamento",
