@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Bem-vindo(a) à Biblioteca</h2>
+<ul>
+  {% for livro in livros %}
+    <li><a href="{{ url_for('livro_detalhes', id_livro=livro.id_livro) }}">{{ livro.titulo }} - {{ livro.autor }}</a></li>
+  {% else %}
+    <li>Nenhum livro cadastrado.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
